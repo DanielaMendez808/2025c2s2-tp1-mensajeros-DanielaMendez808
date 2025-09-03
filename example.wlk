@@ -12,7 +12,6 @@ object paquete{
 		return destino.restriccion(persona) pagado= true
 	}
 }
-
 object  puenteDeBrooklyn{
 	method restriccion(persona){
 	return persona.peso() < 1000
@@ -44,8 +43,12 @@ object neo{
 
 object saraConnor{
 	var property peso = 58
+	var property vehiculo = moto
 	method puedeHacerLLamada(){
 		return false
+	}
+	method peso(){
+		return peso + vehiculo.peso()
 	}
 }
 
